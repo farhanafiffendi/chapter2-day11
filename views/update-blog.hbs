@@ -35,7 +35,7 @@
     <div class="blog">
         <div class="blog-form">
             <div class="container">
-                <form action="/update-blog/{{edit.id}}" method="post">
+                <form action="/update-blog/{{edit.id}}" enctype="multipart/form-data" method="post">
                 {{!-- <input type="hidden" name="id" id="id" value="{{this.index}}"/> --}}
                     <h1
                         style="text-align: center; font-weight: 900; font-family: 'Oswald', sans-serif; margin: 20px 0;">
@@ -43,6 +43,7 @@
                     </h1>
                     <div>
                         <label style="font-weight: bold; font-size: 20px" for="inputProject">Project Name</label>
+                        <input hidden type="text" name="image" value="{{edit.image}}" id="inputProject"/>
                         <input style="
                     background-color: rgb(232, 235, 235); 
                     width: 100%; 

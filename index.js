@@ -140,7 +140,7 @@ app.get('/blog-detail/:id', function(req, res) {
                     duration: getDate(item.inputstart , item.inputend)
                 }
             })
-            console.log(databaru);
+            // console.log(databaru);
 
             res.render('blog-detail', {blogs: databaru[0]})
         })
@@ -185,7 +185,7 @@ app.get ('/update-blog/:id', (req, res) =>{
     })
 })
 
-app.post('/update-blog/:id', function(req, res){
+app.post('/update-blog/:id', upload.single('inputImage'), function(req, res){
     let data = req.body
     let id = req.params.id
     let node = data.inputNode
@@ -196,10 +196,16 @@ app.post('/update-blog/:id', function(req, res){
     let cek = array.filter (function(item){
         return item !== undefined
     })
-    console.log(id);
+    let image = ""
+    if(req.file != null){
+        image = req.file.filename
+    } else{
+        image = data.image
+    }
+    // console.log(id);
     db.connect((err, client, done) => {
         if (err) throw err
-        client.query (`UPDATE tb_blog SET project=$1, inputstart=$2, inputend=$3, description=$4, technologies=$5 WHERE id =  ${id};`, 
+        client.query (`UPDATE tb_blog SET project=$1, inputstart=$2, inputend=$3, description=$4, technologies=$5, image = $6 WHERE id =  ${id};`, 
         [
             data.inputProject,
         // buat array untuk di masukkan ke db
@@ -207,6 +213,7 @@ app.post('/update-blog/:id', function(req, res){
             data.inputEnd,
             data.inputDescription,
             cek,
+            image,
         ],
         (err, result) =>{
             if (err) throw err

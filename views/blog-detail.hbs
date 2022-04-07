@@ -39,8 +39,8 @@
 
             <h1>{{blogs.project}}</h1>
             <div class="author">
-                <img src="https://media.istockphoto.com/photos/smart-female-it-programer-working-on-desktop-computer-in-data-center-picture-id1194430803"
-                    alt="" />
+                <img src="/uploads/{{blogs.image}}"
+                    alt="gambar" />
 
                 <div class="item">
                     <div>
@@ -49,7 +49,9 @@
                     </div>
                     <div class="icon2">
                         <h4>Technologies</h4>
-                        <i class="{{blogs.technologies}}"></i>
+                        {{#each blogs.technologies}}
+                        <i class="{{this}}"></i>
+                        {{/each}}
                     </div>
                 </div>
             </div>
