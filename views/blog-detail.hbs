@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title>Blog Page - detail</title>
+    <link rel="icon" href="../public/assets/tittle.png">
+    <link rel="stylesheet" href="../public/styleBlog.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- NavBar -->
+    <nav>
+
+        <div class="nav-left">
+            <img src="../public/assets/logo.png" alt="logo">
+
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/blog">My Project</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="nav-right">
+            <a href="/contact">Contact</a>
+        </div>
+
+    </nav>
+
+    <!-- Blog -->
+    <div class="blog-detail">
+        <div class="blog-detail-container">
+
+            <h1>{{blogs.project}}</h1>
+            <div class="author">
+                <img src="https://media.istockphoto.com/photos/smart-female-it-programer-working-on-desktop-computer-in-data-center-picture-id1194430803"
+                    alt="" />
+
+                <div class="item">
+                    <div>
+                        <h4>Durasi</h4>
+                        <i style="margin-right: 5px;" class="fa-solid fa-calendar-days"></i>{{blogs.duration}}
+                    </div>
+                    <div class="icon2">
+                        <h4>Technologies</h4>
+                        <i class="{{blogs.technologies}}"></i>
+                    </div>
+                </div>
+            </div>
+            <p>
+               {{this.blogs.description}}
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

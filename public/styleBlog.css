@@ -1,0 +1,264 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: rgb(255, 255, 123);
+  display: flex;
+  height: 9vh;
+}
+
+nav .nav-left {
+  /* background-color: blueviolet; */
+  display: flex;
+  padding-left: 100px;
+  flex: 50%;
+  font-weight: bold;
+  align-items: center;
+}
+
+nav .nav-left li {
+  display: inline;
+}
+
+nav .nav-left ul li a {
+  text-decoration: none;
+  color: black;
+  /* font-weight: 800; */
+  padding: 12px;
+}
+
+nav .nav-right {
+  /* background-color: brown; */
+  display: flex;
+  justify-content: flex-end; /* horizontal */
+  align-items: center; /* vertical */
+  flex: 50%;
+  font-weight: bold;
+  padding-right: 100px;
+}
+
+nav .nav-right a {
+  background-color: rgb(32, 30, 30);
+  color: white;
+  padding: 8px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+nav .navLogin a {
+  background-color: rgb(255, 255, 123);
+  color: black;
+  padding: 8px 10px;
+  margin-right: 30px;
+}
+
+.container {
+  background-color: azure;
+  height: 91vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-form form .input-blog-image-group {
+  width: 98%;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  background-color: rgb(232, 235, 235);
+  border: 1px solid #c4c4c4;
+  border-radius: 8px;
+  cursor: pointer;
+  /* box-shadow: 0 0 4px; */
+}
+
+.blog-form form .input-blog-image-group label p {
+  font-size: 15px;
+}
+
+.blog-form form .input-blog-image-group label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
+  flex: 100%;
+  margin-top: 20px;
+  /* background-color: aqua; */
+}
+
+.section h1 {
+  text-align: center;
+}
+
+.blog .blog-list .blog-content h1 {
+  margin-right: 20px;
+}
+
+.blog .blog-list {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  display: flex;
+  margin-left: 100px;
+  align-items: left;
+  /* margin-right: 10px; */
+  /* border: 1px solid black; */
+  flex-wrap: wrap;
+}
+
+.blog .blog-list .blog-list-item {
+  width: 25%;
+  height: 480px;
+  padding: 15px;
+  margin-right: 30px;
+  box-shadow: 0 0 4px;
+  margin-bottom: 20px;
+  border: 2px solid #dbdbdb;
+  border-radius: 8px;
+  /* display: flex; */
+}
+
+.blog .blog-list .blog-list-item .blog-image {
+  flex: 1;
+}
+
+.blog .blog-list .blog-list-item .blog-image img {
+  width: 100%;
+  height: 200px;
+  /* object-fit: cover; */
+}
+
+.blog .blog-list .blog-list-item .blog-content {
+  padding-left: 20px;
+  flex: 2;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  /* margin-left: -18px; */
+}
+
+.blog .blog-list .btn-group .btn-edit {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 0;
+  justify-items: left;
+  margin-right: 20px;
+  border-radius: 4px;
+  color: white;
+  padding: 5px 38px;
+  background: #000000;
+}
+
+.blog .blog-list .btn-group .btn-post {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 0;
+  justify-content: right;
+  border-radius: 4px;
+  background: #000000;
+  padding: 5px 30px;
+  color: #fff;
+}
+
+.blog .blog-list h1 a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.blog .blog-list .detail-blog-content {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.blog .blog-list .blog-list-item p {
+  margin-top: 10px;
+  /* margin-right: 10px; */
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: justify;
+}
+
+.blog .blog-list h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blog-detail {
+  background-color: azure;
+  display: flex;
+  justify-content: center;
+}
+
+.blog-detail-container {
+  width: 80%;
+  margin: 40px 0;
+}
+
+.blog-detail-container img {
+  width: 50%;
+}
+
+.blog-detail-container h1 {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 120%;
+  margin-bottom: 15px;
+}
+
+.blog-detail-container .author {
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.blog-detail-container p {
+  margin-top: 40px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 140%;
+  text-align: justify;
+}
+
+.author {
+  display: flex;
+}
+
+.item {
+  flex-direction: column;
+  margin-left: 20px;
+  padding-right: 20px;
+}
+
+.icon2 i {
+  margin-right: 10px;
+  font-size: 25px;
+}
+
+.blog-content .teks {
+  color: rgb(145, 145, 145);
+}
+
+.alert {
+  height: 30px;
+  width: 100%;
+  color: red;
+  background-color: rgb(255, 203, 203);
+  font-size: 20px;
+  margin-bottom: 5px;
+}

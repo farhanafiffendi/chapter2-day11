@@ -1,0 +1,145 @@
+<html>
+
+<head>
+    <title>Project</title>
+    <link rel="stylesheet" href="../public/styleBlog.css">
+    <link rel="icon" href="../public/assets/tittle.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    {{!-- <script src="blog.js"></script> --}}
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="nav-left">
+            <a href="/"><img src="../public/assets/logo.png" alt="logo"></a>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a style="color:red;" href="/blog">Add Project</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="nav-right">
+            <a href="/contact">Contact</a>
+        </div>
+
+    </nav>
+    <div class="blog">
+        <div class="blog-form">
+            <div class="container">
+                <form action="/update-blog/{{edit.id}}" method="post">
+                {{!-- <input type="hidden" name="id" id="id" value="{{this.index}}"/> --}}
+                    <h1
+                        style="text-align: center; font-weight: 900; font-family: 'Oswald', sans-serif; margin: 20px 0;">
+                        Update My Project
+                    </h1>
+                    <div>
+                        <label style="font-weight: bold; font-size: 20px" for="inputProject">Project Name</label>
+                        <input style="
+                    background-color: rgb(232, 235, 235); 
+                    width: 100%; 
+                    padding: 10px;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 4px;
+                    border: 1px solid rgb(209, 207, 207)" type="text" name="inputProject" value="{{edit.project}}" id="inputProject"/>
+                    </div>
+
+                    <div style="display: flex; flex: 100%;">
+                        <div style="margin-top: 15px;">
+                            <label for="inputStart" style="font-weight: bold; font-size: 20px;">Start Date</label>
+                            <input type="date" id="inputStart" name="inputStart" value="{{edit.start}}" style="
+                    background-color: rgb(232, 235, 235); 
+                    width: 80%; 
+                    margin-right: 50px;
+                    padding: 10px;
+                    margin-top: 5px;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 4px;
+                    border: 1px solid rgb(209, 207, 207)" />
+                        </div>
+
+                        <div style="margin-top: 15px;">
+                            <label for="inputEnd" style="font-weight: bold; font-size: 20px">End Date</label>
+                            <input type="date" name="inputEnd" id="inputEnd" value="{{edit.end}}" style="
+                    background-color: rgb(232, 235, 235); 
+                    width: 100%; 
+                    padding: 10px;
+                    margin-top: 5px;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 4px;
+                    border: 1px solid rgb(209, 207, 207)" />
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 15px;">
+                        <label for="inputDescription" style="font-weight: bold; font-size: 20px;">Description</label>
+                        <textarea name="inputDescription" id="inputDescription" style="
+                    background-color: rgb(232, 235, 235); 
+                    width: 100%; 
+                    padding: 10px;
+                    margin-top: 5px;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 4px;
+                    resize: none;
+                    border: 1px solid rgb(209, 207, 207);
+                    height: 100px;">{{edit.description}}</textarea>
+                    </div>
+
+                    <div style="margin-top: 15px;">
+                        <p style="font-weight: bold; font-size: 20px;">Technologies</p>
+
+                        <input type="checkbox" value="fa-brands fa-node-js{{edit.node}}" name="inputNode" id="inputNode">
+                        <label style="margin-right: 70px;">Node Js</label>
+                        <input type="checkbox" value="fa-brands fa-react{{edit.react}}" name="inputReact" id="inputReact">
+                        <label name="input-react">React</label>
+                    </div>
+
+                    <div style="margin-top: 15px;">
+                        <input type="checkbox" value="fa-brands fa-js{{edit.javascript}}" name="inputJavascript" id="inputJavascript">
+                        <label style="margin-right: 60px;">javascript</label>
+                        <input type="checkbox" value="fa-brands fa-html5{{edit.html}}" name="inputHtml" id="inputHtml">
+                        <label name="input-html">HTML5</label>
+                    </div>
+
+                   <div style="margin-top: 15px; font-size: 20px;">
+                        <label style="font-weight: bold;">Upload Image</label>
+                        <div class="input-blog-image-group">
+                            <label for="input-blog-image">
+                                <p>Choose File</p>
+                                <img src="../public/assets/file.png" alt="file" />
+                            </label>
+                            <input type="file" name="inputImage" value="{{edit.image}}" id="input-blog-image" hidden />
+                        </div>
+                    </div>
+
+                    <div class="btn">
+                        <button style="
+                    text-align: end;
+                    background-color: rgb(32, 30, 30); 
+                    color:white;
+                    margin-top: 10px;
+                    border: none;
+                    padding: 8px 30px;
+                    border-radius: 30px;
+                    font-size: 12px;
+                    cursor:pointer;" type="submit">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
