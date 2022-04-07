@@ -28,7 +28,7 @@ if (isProduction) {
         database: 'personal_web',
         port: 5432,
         user: 'postgres',
-        password: 'ADMIN'
+        password: '12345678'
     })
 
 }
