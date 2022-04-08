@@ -68,7 +68,7 @@ app.get('/', function(req, res) {
                 return{
                     ...item,
                     isLogin: req.session.isLogin,
-                    description: item.description.slice(0, 150) + '....',
+                    description: item.description.slice(0, 100) + '....',
                     duration: getDate(item.inputstart , item.inputend)
                 }
             })
@@ -192,6 +192,7 @@ app.post('/update-blog/:id', upload.single('inputImage'), function(req, res){
     let react = data.inputReact
     let javascript = data.inputJavascript
     let html = data.inputHtml
+
     let array = [node, react, javascript, html]
     let cek = array.filter (function(item){
         return item !== undefined
